@@ -1,0 +1,34 @@
+{
+    "experiment_name":"type1_8_16_sam_wideresnet_nonorm",
+    "use_gpu":true,
+    "gpu_id":"0",
+    "fixed_random":false,
+    "loss":"CEloss",
+    "dataset":{
+        "is_norm":false,
+        "AVP":20,
+        "type":1
+    },
+    "train":{
+        "model":"WideResNet",
+        "optim":"SAM",
+        "lr":0.1,
+        "batch_size":256,
+        "epoch":500,
+        "num_workers":16,
+        "milestones":[
+            50,
+            100
+        ],
+        "save_interval":20,
+        "val_interval":1,
+        "depth":16,
+        "width":8
+    },
+    "test":{
+        "batch_size":256,
+        "num_workers":16
+    },
+    "exp_time":"12-11_19-59-40",
+    "save_root":"../logs/13_type1_8_16_sam_wideresnet_nonorm"
+}

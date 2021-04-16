@@ -1,0 +1,34 @@
+{
+    "experiment_name":"type1_vgg",
+    "use_gpu":true,
+    "gpu_id":"2",
+    "fixed_random":false,
+    "loss":"CEloss",
+    "dataset":{
+        "is_norm":true,
+        "AVP":20,
+        "type":1
+    },
+    "train":{
+        "model":"VGGNet",
+        "modeltype":16,
+        "optim":"SGD",
+        "lr":0.1,
+        "batch_size":128,
+        "epoch":200,
+        "num_workers":16,
+        "milestones":[
+            60,
+            120,
+            150
+        ],
+        "save_interval":20,
+        "val_interval":1
+    },
+    "test":{
+        "batch_size":256,
+        "num_workers":16
+    },
+    "exp_time":"12-13_01-17-22",
+    "save_root":"../logs/20_type1_vgg"
+}

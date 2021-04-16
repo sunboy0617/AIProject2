@@ -1,0 +1,31 @@
+{
+    "experiment_name":"type1_sunnet",
+    "use_gpu":true,
+    "gpu_id":"0",
+    "fixed_random":false,
+    "loss":"CEloss",
+    "dataset":{
+        "is_norm":true,
+        "AVP":20,
+        "type":1
+    },
+    "train":{
+        "model":"SunNet",
+        "lr":0.01,
+        "batch_size":1024,
+        "epoch":1000,
+        "num_workers":16,
+        "milestones":[
+            500,
+            1000
+        ],
+        "save_interval":20,
+        "val_interval":1
+    },
+    "test":{
+        "batch_size":256,
+        "num_workers":16
+    },
+    "exp_time":"12-05_15-25-27",
+    "save_root":"../logs/4_type1_sunnet"
+}
